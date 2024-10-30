@@ -1,4 +1,4 @@
-const mongoose = require("mongoose");
+const mongoose = require('mongoose');
 const connect = mongoose.connect("mongodb://localhost:27017/login-tut");
 
 //checkout connect built or not
@@ -20,6 +20,7 @@ const LoginSchema = new mongoose.Schema({
         required: true
     }
 });
+
 
 //collection part
 

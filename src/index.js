@@ -51,7 +51,7 @@ app.post("/signup",async (req, res) => {
 });
 
 // login user
-app.post("/login", async (req, res) => {
+ app.post("/login", async (req, res) => {
     try{
         const check = await collection.findOne({name: req.body.username}); //checking user in database
         if(!check) {
@@ -69,6 +69,7 @@ app.post("/login", async (req, res) => {
         res.send("wrong Details");
     }
 });
+
 const port = 5000;
 app.listen(port, () => {
     console.log(`Server running on port: ${port}`);
